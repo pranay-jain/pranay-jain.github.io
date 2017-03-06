@@ -1,0 +1,17 @@
+//primary-font = 'Muli', sans-serif
+primary-font = 'Quicksand', sans-serif
+secondary-font = 'Enriqueta', serif
+primary-blue = #addcc8
+primary-red = #f48a94
+
+transition(n)
+  -webkit-transition all n
+  -moz-transition all n
+  transition all n 
+  
+border-image(n)
+	-webkit-border-image -webkit-gradient(linear, 100% 0, 0 0, from(primary-blue), to(primary-red)) 1 100%
+    -webkit-border-image -webkit-linear-gradient(right, primary-blue, primary-red) 1 100%
+    -moz-border-image -moz-linear-gradient(right, primary-blue, primary-red) 1 100%  
+    -o-border-image -o-linear-gradient(right, primary-blue, primary-red) 1 100%
+    border-image linear-gradient(to right, primary-blue, primary-blue) 1 100%
