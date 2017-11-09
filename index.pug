@@ -8,64 +8,88 @@ html
 		link(href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet")
 		link(href="https://fonts.googleapis.com/css?family=Zilla+Slab:400,400i,500" rel="stylesheet")
 		link(href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet")
+		link(href="style/animate.css" rel="stylesheet")
+
+		script(src="scripts/jquery-3.2.1.js")
+		script(src="scripts/script.js")
 	body
 		header
 		section#landing
 			.landing-text
 				h1 HELLO,
-				h2 My name is Pranay Jain.
+				h2.name My name is Pranay Jain.
 				h2.landing I like to design simple, beautiful experiences lorem ipsum dolor sit amet.
 		section#projects
-			h4 featured projects.
+			h4.no-display featured projects.
 			.project
-				.proj_image
-					img(src='storally.jpg')
+				.proj_image.no-display
+						img(src='storally.jpg')
 				.content
-					.heading
-						h2 Storally
-						h3 LOGO DESIGN
-					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-			.project
-				.proj_image
-					img(src='storally.jpg')
-				.content
-					.heading
+					.heading.no-display
 						h2 Transfer Tracker
 						h3 Full-stack development
-					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+					p.no-display A web application that uses the Twitter Streaming API to provide football transfer rumours and updates from all around the globe. Based on your choice of team, this app provides you with tweets made by mostly credible sources for the transfer updates regarding your favourite team.
+			.project
+				.proj_image.no-display
+					img(src='storally.jpg')
+				.content
+					.heading.no-display
+						h2 Storally
+						h3 LOGO DESIGN &amp; Branding
+					p.no-display Logo design for a UBC-based startup that aims to help students store their belongings in a safe environment by crowd-sourcing storage space to other students. For this project, I decided to go for a clean, minimal design which uses radiant pastel colours that appeal more to a younder audience and conveys the idea of the startup in a simple way.
 
 			.project
-				.proj_image
-					img(src='storally.jpg')
+				.proj_image.no-display
+						img(src='sift.jpg')
 				.content
-					.heading
+					.heading.no-display
 						h2 Sift
-						h3 Front-end development
-					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						h3 UX Design &amp; development
+					p.no-display A web application that gives businesses a birds-eye view into their customers' feedback. It connects to feedback forms, support email, and reviews to create a visual summary of a business's customer relationships using natural language processing. This provides a quick way to see everything important that customers are saying. 
 			.project
-				.proj_image
-					img(src='storally.jpg')
+				.proj_image.no-display
+						img(src='playsmid.jpg')
 				.content
-					.heading
+					.heading.no-display
 						h2 Playsmid
 						h3 Full-stack development
-					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  
+					
+					p.no-display An interactive game that aims to teach synthetic biology to beginners interested in biology. I developed the game engine using jQuery. Also worked on the back-end developed using a Node server which retrieves the game data using a Mongo database.
 
 			
 		section#about
-			h4 about me.
-			<br><br><br>
+			h4.no-display about me.
 
-			.about-header
-				h5 I'm a User Experience designer and Full-stack Web developer based in Vancouver, Canada.
+			.main
+				.left-content
+					.about-header.no-display
+						h5 I'm a full-stack web developer and UX designer based in Vancouver, Canada.
 
-			.about-content
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				<br />
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					.about-content
+						p.no-display I hail from New Delhi, and currently studying Computer Science and Math at the University of British Columbia, Vancouver.
+						<br />
+						p.no-display I love creating minimal and simplistic designs that are easy to use. I'm a type lover and often spend my time discovering new fonts and implementing them in designs.  
+						<br />
+						p.no-display Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br /> In my free time, I enjoy listening to music and jamming to it on my guitar, working out or watching and discussing soccer.
+				.right-content
+					.tldr.no-display tl; dr
+					.cards
+						.skill-card.no-display creative developer
+						.skill-card.no-display UX design
+						.skill-card.no-display graphic design
+						.skill-card.no-display digital marketing
+						.skill-card.no-display interaction design
+						.skill-card.no-display creative developer
+						.skill-card.no-display JavaScript
+						.skill-card.no-display HTML/CSS
+						.skill-card.no-display iOS 
+						.skill-card.no-display digital marketing
+						.skill-card.no-display Adobe Suite
+						.skill-card.no-display Java
+
 
 		section#contact
-			h5 I am always down to work on <span>cool projects</span>. If you have a <span>project idea,</span> <span>business plan</span> or just want to have a chat, I'd love to talk.
+			h5.no-display I am always down to work on <span>cool projects</span>. If you have a <span>project idea,</span> <span>business plan</span> or just want to have a chat, I'd love to talk.
 
 			.links
 				hr

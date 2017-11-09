@@ -8,12 +8,13 @@
 		width 60%
 		margin 0 auto
 		color #fff
+		animation(.8s, 0)
 		
 		span
 			color primary-red
 		
 		span:nth-of-type(2n)
-			color primary-blue
+			color highlight-blue
 			
 	.links
 		position relative
@@ -28,7 +29,7 @@
 			width 60%
 			position absolute
 			border none
-			border-top 2px solid primary-blue
+			border-top 2px solid highlight-blue
 			background none
 			top -10px
 		
@@ -57,7 +58,7 @@
 			width 50%
 			position relative
 			border none
-			border-top 2px solid primary-blue
+			border-top 2px solid highlight-blue
 			background none
 		
 		.facebook-icon
@@ -65,7 +66,7 @@
 			width 20px
 			color #fff
 					
-@media (max-width 700px)
+@media (max-width 850px)
 	#contact
 		h5
 			width 80%
@@ -74,8 +75,7 @@
 
 		.links
 			width 80%
-			margin auto
-			left 0
+			left 10%
 			margin-top 100px
 			
 @media (max-width 550px)
