@@ -16,7 +16,7 @@ $(document).ready(function () {
 				if (windowScroll >= $(this).offset().top - window.innerHeight/1.5) {				
 					$(this).find('.proj_image, .heading, p').removeClass("no-display");
 					$(this).find('.proj_image').addClass("animated fadeIn");
-					$(this).find('.content p').addClass("animated flipInX");
+					$(this).find('.content p').addClass("animated fadeInUp");
 					if (index % 2 === 0) {
 						$(this).find('.heading').addClass("animated fadeInRight");
 					} else {						
