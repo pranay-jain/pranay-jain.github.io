@@ -183,6 +183,14 @@
 #about .main .left-content .about-content {
   width: 100%;
 }
+#about .main .left-content .about-content h4.add-margin {
+  left: 0;
+  font-size: 1em;
+}
+#about .main .left-content .about-content h4.add-margin:before {
+  width: 100%;
+  border-bottom: 6px solid #c1e0e2;
+}
 #about .main .left-content .about-content p {
   -webkit-animation-duration: 0.7s;
   -moz-animation-duration: 0.7s;
@@ -190,6 +198,9 @@
   -webkit-animation-delay: 0.2s;
   -moz-animation-delay: 0.2s;
   animation-delay: 0.2s;
+}
+#about .main .left-content .about-content p.last {
+  margin-bottom: 50px;
 }
 #about .main .left-content .about-header {
   width: 80%;
@@ -438,4 +449,8 @@ footer {
   display: flex;
   justify-content: center;
   margin-top: 80px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }
