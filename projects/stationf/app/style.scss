@@ -1,0 +1,42 @@
+$pink: #FF00AE;
+$blue-grey: #60697F;
+$font: fabrikat, sans-serif;
+
+@font-face {
+	font-family: fabrikat;
+	src: url('./assets/FabrikatLight.otf');
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: fabrikat;
+	src: url('./assets/FabrikatRegular.otf');
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: fabrikat;
+	src: url('./assets/FabrikatMedium.otf');
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: fabrikat;
+	src: url('./assets/FabrikatBold.otf');
+	font-weight: 700;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	padding: 0;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	font-family: $font;
+}
+
+a {
+	text-decoration: none;
+}

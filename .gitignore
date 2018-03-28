@@ -4,3 +4,6 @@
 # idea 1
 idea 1
 
+# node modules
+projects/stationf/node_modules/
+*/node_modules/*
