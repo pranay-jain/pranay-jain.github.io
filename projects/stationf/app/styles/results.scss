@@ -7,6 +7,7 @@ $font: fabrikat, sans-serif;
 	position: fixed;
 	left: 400px;
 	width: calc(100vw - 400px);
+	overflow: scroll;
 
 	&-title {
 		font-family: $font;
