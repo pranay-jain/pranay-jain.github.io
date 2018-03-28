@@ -24,7 +24,7 @@ class App extends React.Component {
 	componentWillMount() {
 		this.setCurrentRoom = this.setCurrentRoom.bind(this);
 
-		fetch('http://online.stationf.co/tests/rooms.json', {
+		fetch('https://online.stationf.co/tests/rooms.json', {
 			method: 'GET'
 		})
 		  .then((response) => {
