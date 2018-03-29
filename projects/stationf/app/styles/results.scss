@@ -180,6 +180,34 @@ $font: fabrikat, sans-serif;
 		width: 100vw;
 		left: 0;
 		padding: 24px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		// &-rooms {
+		// 	display: flex;
+		// 	flex-direction: column !important;
+		// 	align-items: center;
+		// }
+
+		&-rooms {
+			justify-content: center;
+		}
+
+		&-rooms-room {
+
+			&:hover > &-content {
+				background: none;
+				transform: translateY(30%);
+			}
+
+			&-content {
+				&:hover > &-details {
+					visibility: hidden;
+				}
+			}
+		}
 	}
 
 	.header {
