@@ -38,7 +38,7 @@ export default class Results extends React.Component {
 					<div className="header-title">STATION F ROOM RESERVATION</div>
 					<div className="icon" onClick={() => this.props.changeFilter(true)}><i className="fas fa-filter" /></div>
 				</div>
-				<div className={`blur ${this.state.currentRoom !== null ? 'active' : ''}`}></div>
+				<div className={`blur ${this.state.currentRoom !== null ? 'active' : ''}`} onClick={this.clearCurrentRoom}></div>
 					{
 						rooms && rooms.length > 0 ?
 						<div className="results">
@@ -80,22 +80,29 @@ export default class Results extends React.Component {
 
 	renderRoom(room, index) {
 		return(
-			<div className="results-rooms-room" onClick={() => this.setCurrentRoom(room)}>
-				<img className="img" src={require(`../assets/room${index}.jpg`)} />
-				<div className="results-rooms-room-content">
-					<div className="results-rooms-room-content-title">{room.name}</div>
-					<div className="results-rooms-room-content-details">
-						<div className="text">Capacity</div>
-						<div className="text">{room.capacity}</div>
-						<div className="text equip">Equipment</div>
-						<div className="results-rooms-room-content-details-equip">
-							{
-								this.renderEquipmentIcons(room.equipements).length > 0 ?
-								this.renderEquipmentIcons(room.equipements)
-								:
-								'N/A'
-							}
+			<div className="room-container">
+				<div className="results-rooms-room" onClick={() => this.setCurrentRoom(room)}>
+					<img className="img" src={require(`../assets/room${index}.jpg`)} />
+					<div className="results-rooms-room-content">
+						<div className="results-rooms-room-content-title">{room.name}</div>
+						<div className="results-rooms-room-content-reserve">
+							Reserve Now
 						</div>
+					</div>
+				</div>
+				<div className="results-rooms-room-info">
+					<div className="results-rooms-room-info-field">Capacity</div>
+					<div className="results-rooms-room-info-value" style={{"paddingRight": "8px"}}>{room.capacity}</div>
+				</div>
+				<div className="results-rooms-room-info">
+					<div className="results-rooms-room-info-field">Equipment</div>
+					<div className="results-rooms-room-info-value-equip">
+						{
+							this.renderEquipmentIcons(room.equipements).length > 0 ?
+							this.renderEquipmentIcons(room.equipements)
+							:
+							'N/A'
+						}
 					</div>
 				</div>
 			</div>
@@ -107,9 +114,9 @@ export default class Results extends React.Component {
 		if (equipments) {
 			for (let equip of equipments) {
 				if (equip.name === 'TV') {
-					renderedEquips.push(<div className="results-rooms-room-content-details-equip-item"><i className={`fas fa-tv`} /></div>);
+					renderedEquips.push(<div className="results-rooms-room-info-value-equip-item"><i className={`fas fa-tv`} /></div>);
 				} else {
-					renderedEquips.push(<div className="results-rooms-room-content-details-equip-item"><img src={require('../assets/projector.png')} /></div>);
+					renderedEquips.push(<div className="results-rooms-room-info-value-equip-item"><img src={require('../assets/projector_alt.png')} /></div>);
 				}
 			}
 		}

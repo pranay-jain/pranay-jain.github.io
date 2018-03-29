@@ -58,11 +58,13 @@ $font: fabrikat, sans-serif;
 		flex-direction: row;
 		flex-wrap: wrap;
 
+		.room-container {
+			margin: 12px; 
+		}
+
 		&-room {
 			height: 200px;
 			width: 280px;
-			//background: $blue-grey;
-			margin: 12px; 
 			overflow: hidden;
 			cursor: pointer;
 
@@ -90,7 +92,7 @@ $font: fabrikat, sans-serif;
 				transition: transform .2s;
 				transform: translateY(30%);
 
-				&:hover > &-details {
+				&:hover > &-reserve {
 					visibility: visible;
 					opacity: 1;
 				}
@@ -104,50 +106,104 @@ $font: fabrikat, sans-serif;
 					//visibility: hidden;
 				}
 
-				&-details {
-					visibility: hidden;
-					opacity: 0;
+				&-reserve {
 					width: 100%;
-					color: #fff;
-					font-weight: 700;
-					font-size: 1em;
+					opacity: 0;
 					display: flex;
 					flex-direction: column;
 					justify-content: center;
 					align-items: center;
-					margin-top: 16px;
-					-webkit-transition: opacity .3s;
-					transition: opacity .3s;
+					padding-top: 48px;
+					text-transform: uppercase;
+					color: #fff;
+					font-size: .92em;
+					font-weight: 700;
+				}
 
-					.text {
-						line-height: 20px;
-					}
+				// &-details {
+				// 	visibility: hidden;
+				// 	opacity: 0;
+				// 	width: 100%;
+				// 	color: #fff;
+				// 	font-weight: 700;
+				// 	font-size: 1em;
+				// 	display: flex;
+				// 	flex-direction: column;
+				// 	justify-content: center;
+				// 	align-items: center;
+				// 	margin-top: 16px;
+				// 	-webkit-transition: opacity .3s;
+				// 	transition: opacity .3s;
 
-					.equip {
-						margin-top: 8px;
-					}
+				// 	.text {
+				// 		line-height: 20px;
+				// 	}
 
-					&-equip {
-						margin-top: 8px;
-						display: flex;
-						flex-direction: row;
-						justify-content: center;
-						align-items: center;
+				// 	.equip {
+				// 		margin-top: 8px;
+				// 	}
 
-						&-item {
-							width: 24px;
-							height: 24px;
-							margin-right: 8px;
-							margin-left: 8px;
-							display: block;
+				// 	&-equip {
+				// 		margin-top: 8px;
+				// 		display: flex;
+				// 		flex-direction: row;
+				// 		justify-content: center;
+				// 		align-items: center;
 
-							img {
-								width: 90%;
-								height: 90%;
-							}
+				// 		&-item {
+				// 			width: 24px;
+				// 			height: 24px;
+				// 			margin-right: 8px;
+				// 			margin-left: 8px;
+				// 			display: block;
+
+				// 			img {
+				// 				width: 90%;
+				// 				height: 90%;
+				// 			}
+				// 		}
+				// 	}
+				// }
+			}
+		}
+
+		&-room-info {
+			width: 80%;
+			margin: 8px auto;
+			display: flex;
+			justify-content: space-between;
+
+			&-field {
+				font-weight: 600;
+				color: #888;
+				font-size: .92em;
+			}
+
+			&-value {
+				font-weight: 600;
+				color: #000;
+				font-size: .92em;
+
+				&-equip {
+					//margin-top: 8px;
+					display: flex;
+					flex-direction: row;
+					// justify-content: center;
+					// align-items: center;
+
+					&-item {
+						width: 24px;
+						height: 24px;
+						margin-right: 8px;
+						margin-left: 8px;
+						display: block;
+
+						img {
+							width: 100%;
+							height: 100%;
 						}
 					}
-				}
+				}	
 			}
 		}
 	}
@@ -185,12 +241,6 @@ $font: fabrikat, sans-serif;
 		justify-content: center;
 		align-items: center;
 
-		// &-rooms {
-		// 	display: flex;
-		// 	flex-direction: column !important;
-		// 	align-items: center;
-		// }
-
 		&-rooms {
 			justify-content: center;
 		}
@@ -203,7 +253,7 @@ $font: fabrikat, sans-serif;
 			}
 
 			&-content {
-				&:hover > &-details {
+				&:hover > &-reserve {
 					visibility: hidden;
 				}
 			}

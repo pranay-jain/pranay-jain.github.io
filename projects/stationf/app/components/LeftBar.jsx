@@ -25,12 +25,12 @@ export default class LeftBar extends React.Component {
 
 					<div className="left-bar-form-search">
 						<div className="left-bar-form-search-field">Date</div>
-						<input type="date" name="bday" onChange={this.props.onDateChange} />
+						<input defaultValue="2018-03-31" type="date" name="bday" onChange={this.props.onDateChange} />
 
 						<div className="left-bar-form-search-field">Time Slot</div>
-						<input placeholder="Start time" type="time" step="1800" name="from" onChange={this.props.onTimeChangeFrom}/>
+						<input defaultValue="16:00" type="time" step="1800" name="from" onChange={this.props.onTimeChangeFrom}/>
 						<div className="left-bar-form-search-to">to</div>
-						<input placeholder="End time" type="time" step="1800" name="to" onChange={this.props.onTimeChangeTo}/>
+						<input defaultValue="20:00" type="time" step="1800" name="to" onChange={this.props.onTimeChangeTo}/>
 
 						<div className="left-bar-form-search-field">Number of Seats</div>
 						<input type="number" min="1" max="100" placeholder="1" onChange={this.props.onSeatsChange} />
