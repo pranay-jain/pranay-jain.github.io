@@ -75,6 +75,16 @@ $font: fabrikat, sans-serif;
 					color: #000;
 					font-size: .92em;	
 				}
+
+				input {
+					font-weight: 600;
+					color: #000;
+					font-size: .92em;	
+					border: none;
+					border: 1px solid #eee;
+					padding: 8px;
+					background: #eee;
+				}
 			}
 		}
 	}

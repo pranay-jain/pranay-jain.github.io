@@ -55,11 +55,15 @@ export default class RoomDialog extends React.Component {
 								</div>
 								<div className="room-dialog-body-details-detail">
 									<div className="room-dialog-body-details-detail-field">Date</div>
-									<div className="room-dialog-body-details-detail-value">{this.props.date ? this.props.date : '20-12-2018'}</div>
+									<div className="room-dialog-body-details-detail-value">{this.props.date ? this.props.date : <input defaultValue="2018-03-31" type="date"/>}</div>
 								</div>
 								<div className="room-dialog-body-details-detail">
-									<div className="room-dialog-body-details-detail-field">Time</div>
-									<div className="room-dialog-body-details-detail-value">{this.props.timeFrom && this.props.timeTo ? this.props.timeFrom + ' - ' + this.props.timeTo : '4:00 PM - 5:00 PM'}</div>
+									<div className="room-dialog-body-details-detail-field">From</div>
+									<div className="room-dialog-body-details-detail-value">{this.props.timeFrom ? this.props.timeFrom : <input defaultValue="16:00" type="time" step="1800"  />}</div>
+								</div>
+								<div className="room-dialog-body-details-detail">
+									<div className="room-dialog-body-details-detail-field">Till</div>
+									<div className="room-dialog-body-details-detail-value">{this.props.timeTo ? this.props.timeTo : <input defaultValue="20:00" type="time" step="1800"  />}</div>
 								</div>
 							</div>
 						</div>
