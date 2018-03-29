@@ -24,7 +24,6 @@ export default class Results extends React.Component {
 
 		if(this.props.isFiltered) {
 			if (this.props.date || this.props.timeFrom || this.props.timeTo) {
-				console.log('umseats', this.props.numberSeats);
 				rooms = rooms.slice(3);
 			} 
 
@@ -35,7 +34,7 @@ export default class Results extends React.Component {
 				});
 			}
 
-			if (this.props.equip) {
+			if (this.props.equip && this.props.equip.length > 0) {
 				rooms = rooms.filter((room) => {
 					let ret = false; 
 					for (let equip of this.props.equip) {

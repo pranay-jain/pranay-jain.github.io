@@ -26,7 +26,7 @@ class App extends React.Component {
 		this.fetchResults = this.fetchResults.bind(this);
 		this.onDateChange = this.onDateChange.bind(this);
 		this.onTimeChangeFrom = this.onTimeChangeFrom.bind(this);
-		this.onTimeChangeTo = this.onTimeChangeFrom.bind(this);
+		this.onTimeChangeTo = this.onTimeChangeTo.bind(this);
 		this.onSeatsChange = this.onSeatsChange.bind(this);
 		this.changeFilter = this.changeFilter.bind(this);
 		this.changeIsFiltered = this.changeIsFiltered.bind(this);
@@ -42,7 +42,6 @@ class App extends React.Component {
 					onDateChange = {this.onDateChange} 
 					onTimeChangeFrom = {this.onTimeChangeFrom}
 					onTimeChangeTo = {this.onTimeChangeTo}
-					onTimeChangeTo = {this.onTimeChangeFrom}
 					onSeatsChange={this.onSeatsChange}
 					fetchResults = {this.fetchResults}  
 					showFilter={this.state.showFilter}
