@@ -24,10 +24,12 @@ export default class Results extends React.Component {
 
 		if(this.props.isFiltered) {
 			if (this.props.date || this.props.timeFrom || this.props.timeTo) {
+				console.log('umseats', this.props.numberSeats);
 				rooms = rooms.slice(3);
 			} 
 
 			if (this.props.numberSeats) {
+				console.log('umseats', this.props.numberSeats);
 				rooms = rooms.filter((room) => {
 					return room.capacity > this.props.numberSeats
 				});

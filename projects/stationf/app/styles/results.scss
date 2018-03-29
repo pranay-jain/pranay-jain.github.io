@@ -68,11 +68,11 @@ $font: fabrikat, sans-serif;
 			overflow: hidden;
 			cursor: pointer;
 
-			&:hover > &-content {
-				//background: rgba(255, 0, 174, 0.5);
-				background: linear-gradient(rgba(119, 14, 227, 0.5) , rgba(44, 123, 255, 0.5));
-				transform: translateY(0);
-			}
+			// &:hover > &-content {
+			// 	//background: rgba(255, 0, 174, 0.5);
+			// 	background: linear-gradient(rgba(119, 14, 227, 0.5) , rgba(44, 123, 255, 0.5));
+			// 	transform: translateY(0);
+			// }
 
 			.img {
 				width: 280px;
@@ -92,10 +92,10 @@ $font: fabrikat, sans-serif;
 				transition: transform .2s;
 				transform: translateY(30%);
 
-				&:hover > &-reserve {
-					visibility: visible;
-					opacity: 1;
-				}
+				// &:hover > &-reserve {
+				// 	visibility: visible;
+				// 	opacity: 1;
+				// }
 
 				&-title {
 					color: #fff;
@@ -248,16 +248,16 @@ $font: fabrikat, sans-serif;
 
 		&-rooms-room {
 
-			&:hover > &-content {
-				background: none;
-				transform: translateY(30%);
-			}
+			// &:hover > &-content {
+			// 	background: none;
+			// 	transform: translateY(30%);
+			// }
 
-			&-content {
-				&:hover > &-reserve {
-					visibility: hidden;
-				}
-			}
+			// &-content {
+			// 	&:hover > &-reserve {
+			// 		visibility: hidden;
+			// 	}
+			// }
 		}
 	}
 
@@ -267,4 +267,24 @@ $font: fabrikat, sans-serif;
 		z-index: 300;
 	}
 
+}
+
+@media (hover: hover) {
+   .results {
+		&-rooms-room {
+
+			&:hover > &-content {
+				//background: rgba(255, 0, 174, 0.5);
+				background: linear-gradient(rgba(119, 14, 227, 0.5) , rgba(44, 123, 255, 0.5));
+				transform: translateY(0);
+			}
+
+			&-content {
+				&:hover > &-reserve {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+		}
+	}
 }
