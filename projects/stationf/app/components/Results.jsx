@@ -67,6 +67,9 @@ export default class Results extends React.Component {
 						</div>
 					}
 				<RoomDialog 
+					onDateChange = {this.props.onDateChange} 
+					onTimeChangeFrom = {this.props.onTimeChangeFrom}
+					onTimeChangeTo = {this.props.onTimeChangeTo}
 					room={this.state.currentRoom} 
 					isOpen={this.state.currentRoom !== null} 
 					clearCurrentRoom={this.clearCurrentRoom}

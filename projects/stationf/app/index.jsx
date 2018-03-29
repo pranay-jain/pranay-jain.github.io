@@ -59,6 +59,9 @@ class App extends React.Component {
 						changeFilter={this.changeFilter} 
 						rooms={this.state.rooms} 
 						setCurrentRoom={this.setCurrentRoom}
+						onDateChange = {this.onDateChange} 
+						onTimeChangeFrom = {this.onTimeChangeFrom}
+						onTimeChangeTo = {this.onTimeChangeTo}
 						date={this.state.date}
 						equip={this.state.equip}
 						timeFrom={this.state.timeFrom}

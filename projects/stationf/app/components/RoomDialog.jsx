@@ -55,15 +55,15 @@ export default class RoomDialog extends React.Component {
 								</div>
 								<div className="room-dialog-body-details-detail">
 									<div className="room-dialog-body-details-detail-field">Date</div>
-									<div className="room-dialog-body-details-detail-value">{this.props.date ? this.props.date : <input defaultValue="2018-03-31" type="date"/>}</div>
+									<div className="room-dialog-body-details-detail-value"><input value={this.props.date} defaultValue={"2018-03-31"} type="date" onChange={this.props.onDateChange}/></div>
 								</div>
 								<div className="room-dialog-body-details-detail">
 									<div className="room-dialog-body-details-detail-field">From</div>
-									<div className="room-dialog-body-details-detail-value">{this.props.timeFrom ? this.props.timeFrom : <input defaultValue="16:00" type="time" step="1800"  />}</div>
+									<div className="room-dialog-body-details-detail-value"><input value={this.props.timeFrom} defaultValue={"16:00"} type="time" step="1800" onChange={this.props.onTimeChangeFrom}/></div>
 								</div>
 								<div className="room-dialog-body-details-detail">
 									<div className="room-dialog-body-details-detail-field">Till</div>
-									<div className="room-dialog-body-details-detail-value">{this.props.timeTo ? this.props.timeTo : <input defaultValue="20:00" type="time" step="1800"  />}</div>
+									<div className="room-dialog-body-details-detail-value"><input value={this.props.timeTo} defaultValue={"20:00"} type="time" step="1800"  onChange={this.props.onTimeChangeTo}/></div>
 								</div>
 							</div>
 						</div>
