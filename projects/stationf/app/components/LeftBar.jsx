@@ -37,8 +37,8 @@ export default class LeftBar extends React.Component {
 
 						<div className="left-bar-form-search-field">Equipment</div>
 						<div className="left-bar-form-search-equip">
-							<div className={`left-bar-form-search-equip-item ${this.state.selected.indexOf('tv') >= 0 ? 'selected': ''}`} onClick={() => this.selectEquip('tv')}><i className="fas fa-tv" /></div>
-							<div className={`left-bar-form-search-equip-item ${this.state.selected.indexOf('proj') >= 0 ? 'selected': ''}`} onClick={() => this.selectEquip('proj')}><i className="proj"/></div>
+							<div className={`left-bar-form-search-equip-item ${this.props.selected.indexOf('TV') >= 0 ? 'selected': ''}`} onClick={() => this.props.selectEquip('TV')}><i className="fas fa-tv" /></div>
+							<div className={`left-bar-form-search-equip-item ${this.props.selected.indexOf('Retro Projecteur') >= 0 ? 'selected': ''}`} onClick={() => this.props.selectEquip('Retro Projecteur')}><i className="proj"/></div>
 						</div>
 					</div>
 					<div className="left-bar-form-submit" onClick={() => this.props.changeIsFiltered(true)}>SUBMIT</div>

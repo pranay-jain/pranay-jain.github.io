@@ -25,9 +25,23 @@ export default class Results extends React.Component {
 		if(this.props.isFiltered) {
 			if (this.props.date || this.props.timeFrom || this.props.timeTo) {
 				rooms = rooms.slice(3);
-			} else if (this.props.numberSeats) {
+			} 
+
+			if (this.props.numberSeats) {
 				rooms = rooms.filter((room) => {
 					return room.capacity > this.props.numberSeats
+				});
+			}
+
+			if (this.props.equip) {
+				console.log("EQUIP", this.props.equip, rooms);
+				rooms = rooms.filter((room) => {
+					let ret = false; 
+					for (let equip of this.props.equip) {
+						ret = ret || room.equipements.map(eq => eq.name).indexOf(equip) >= 0
+					}
+
+					return ret
 				});
 			}
 		}
