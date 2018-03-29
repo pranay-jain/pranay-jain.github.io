@@ -34,7 +34,6 @@ export default class Results extends React.Component {
 			}
 
 			if (this.props.equip) {
-				console.log("EQUIP", this.props.equip, rooms);
 				rooms = rooms.filter((room) => {
 					let ret = false; 
 					for (let equip of this.props.equip) {
