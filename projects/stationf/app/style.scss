@@ -40,3 +40,32 @@ html, body {
 a {
 	text-decoration: none;
 }
+
+.loading {
+	padding: 48px;
+	position: fixed;
+	left: 400px;
+	width: calc(100vw - 400px);
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 600;
+	color: #888;
+	font-size: 1.2em;
+}
+
+@media only screen and (max-width: 1100px) {
+	.loading {
+		left: 320px;
+		width: calc(100vw - 320px);
+	}
+}
+
+@media only screen and (max-width: 680px) {
+	.loading {
+		width: 100vw;
+		left: 0;
+		padding: 24px;
+	}
+}

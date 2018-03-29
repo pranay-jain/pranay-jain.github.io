@@ -30,7 +30,7 @@ var config = {
         }]
       },
       {
-        test: /\.(png|jpg|svg)$/,  
+        test: /\.(png|jpg|svg|gif)$/,  
         use: [{
             loader: 'url-loader',
             options: { 

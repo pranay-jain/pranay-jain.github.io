@@ -2,7 +2,6 @@ import React from 'react';
 import { render } from 'react-dom';
 import LeftBar from './components/LeftBar';
 import Results from './components/Results';
-import RoomDialog from './components/RoomDialog';
 
 import './style.scss';
 
@@ -17,127 +16,133 @@ class App extends React.Component {
 			numberSeats: 0,
 			equip: [],
 			isFiltered: false,
-			currentRoom: null,
-			rooms: []
+			isLoading: false,
+			rooms: [],
+			showFilter: false
 		};
 	}
 
 	componentWillMount() {
-		this.setCurrentRoom = this.setCurrentRoom.bind(this);
+		this.fetchResults = this.fetchResults.bind(this);
+		this.onDateChange = this.onDateChange.bind(this);
+		this.onTimeChangeFrom = this.onTimeChangeFrom.bind(this);
+		this.onTimeChangeTo = this.onTimeChangeFrom.bind(this);
+		this.onSeatsChange = this.onSeatsChange.bind(this);
+		this.changeFilter = this.changeFilter.bind(this);
+		this.changeIsFiltered = this.changeIsFiltered.bind(this);
 
-		this.setState({
-			...this.state,
-			rooms: [
-				      {
-				         "name":"Salle #1",
-				         "description":"Salle #1",
-				         "capacity":5,
-				         "equipements":[
-				            {
-				               "name":"TV"
-				            },
-				            {
-				               "name":"Retro Projecteur"
-				            }
-				         ],
-				         "createdAt":"2016-12-07T12:39:29.812Z",
-				         "updatedAt":"2016-12-08T17:31:39.489Z"
-				      },
-				      {
-				         "name":"Salle #2",
-				         "description":"Salle #2",
-				         "capacity":10,
-				         "equipements":[
-				            {
-				               "name":"Retro Projecteur"
-				            }
-				         ],
-				         "createdAt":"2016-12-07T12:39:55.384Z",
-				         "updatedAt":"2016-12-07T13:33:37.184Z"
-				      },
-				      {
-				         "name":"Salle Okjsdkso",
-				         "description":"Salle Okjsdkso",
-				         "capacity":11,
-				         "equipements":[],
-				         "createdAt":"2016-12-07T14:15:55.733Z",
-				         "updatedAt":"2016-12-09T16:45:19.025Z"
-				      },
-				      {
-				         "name":"Salle de ouf",
-				         "description":"Salle de ouf",
-				         "capacity":10,
-				         "equipements":[
-				            {
-				               "name":"TV"
-				            },
-				            {
-				               "name":"Retro Projecteur"
-				            }
-				         ],
-				         "createdAt":"2016-12-09T16:45:34.419Z",
-				         "updatedAt":"2016-12-09T16:45:34.419Z"
-				      },
-				      {
-				         "name":"Salle nulle",
-				         "description":"Salle nulle",
-				         "capacity":26,
-				         "equipements":[
-				            {
-				               "name":"TV"
-				            },
-				            {
-				               "name":"Retro Projecteur"
-				            }
-				         ],
-				         "createdAt":"2016-12-09T16:45:49.096Z",
-				         "updatedAt":"2016-12-09T16:45:49.096Z"
-				      }
-			   ]
-		});
-
-		fetch('https://online.stationf.co/tests/rooms.json', {
-			method: 'GET'
-		})
-		//   .then((response) => {
-		//   	console.log("Hellow rodl");
-		//       if (response.status !== 200) {
-		//         console.log(response);
-		//         return;
-		//       }
-
-		//       // Examine the text in the response
-		//       response.json().then(function(data) {
-		//       	console.log(data);
-		//       });
-		//     }
-		//   )
-		//   .catch((err) => {
-		//     console.log('Fetch Error :-S', err);
-		//   });
+		this.fetchResults();
 	}
 
 	render() {
 		return (
 			<div>
-				<LeftBar />
-				<Results rooms={this.state.rooms} setCurrentRoom={this.setCurrentRoom} />
-				{ this.state.currentRoom ? 
-					<RoomDialog />
+				<LeftBar
+					onDateChange = {this.onDateChange} 
+					onTimeChangeFrom = {this.onTimeChangeFrom}
+					onTimeChangeTo = {this.onTimeChangeTo}
+					onTimeChangeTo = {this.onTimeChangeFrom}
+					onSeatsChange={this.onSeatsChange}
+					fetchResults = {this.fetchResults}  
+					showFilter={this.state.showFilter}
+					changeFilter={this.changeFilter} 
+					changeIsFiltered={this.changeIsFiltered}
+				/>
+				{
+					this.state.isLoading ?
+					<div className="loading">Loading...</div>
 					:
-					null
+					<Results 
+						isFiltered={this.state.isFiltered}
+						changeFilter={this.changeFilter} 
+						rooms={this.state.rooms} 
+						setCurrentRoom={this.setCurrentRoom}
+						date={this.state.date}
+						timeFrom={this.state.timeFrom}
+						timeTo={this.state.timeTo}
+						numberSeats={this.state.numberSeats}
+					 />
 				}
 			</div>
 		);
 	}
 
-	setCurrentRoom(room) {
+	fetchResults() {
+		let self = this;
+		var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
+    		targetUrl = 'https://online.stationf.co/tests/rooms.json';
+
 		this.setState({
 			...this.state,
-			currentRoom: room
+			isLoading: true
+		});
+
+		fetch(proxyUrl + targetUrl)
+		  .then((response) => {
+		      if (response.status !== 200) {
+		        return;
+		      }
+
+		      response.json().then(function(data) {
+		      	self.setState({
+		      		...self.state,
+		      		rooms: data.rooms
+		      	});
+
+		      	setTimeout(() => self.setState({
+		      		...self.state, 
+		      		isLoading: false
+		      	}), 1200);
+		       });
+		    }
+		  )
+		  .catch((err) => {
+		    console.log('Fetch Error :-S', err);
+		  });
+	}
+
+	onDateChange(evt) {
+		this.setState({
+			...this.state,
+			date: evt.target.value
 		});
 	}
-}
+
+	onTimeChangeFrom(evt) {
+		this.setState({
+			...this.state,
+			timeFrom: evt.target.value
+		});
+	}
+
+	onTimeChangeTo(evt) {
+		this.setState({
+			...this.state,
+			timeTo: evt.target.value
+		});
+	}
+
+	onSeatsChange(evt) {
+		this.setState({
+			...this.state,
+			numberSeats: evt.target.value
+		});
+	}
+
+	changeFilter(val) {
+		this.setState({
+			...this.state,
+			showFilter: val
+		});
+	}
+
+	changeIsFiltered(val) {
+		this.setState({
+			...this.state,
+			isFiltered: val
+		});
+	}
+ }
 
 const Root = () => (
 	<App />
