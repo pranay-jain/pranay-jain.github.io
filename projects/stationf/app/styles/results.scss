@@ -264,6 +264,7 @@ $font: fabrikat, sans-serif;
 	.header {
 		visibility: visible;
 		display: flex;
+		z-index: 300;
 	}
 
 }
