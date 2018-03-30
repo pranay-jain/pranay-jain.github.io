@@ -9,6 +9,7 @@ $font: fabrikat, sans-serif;
 	left: 0;
 	background: #000;
 	font-family: $font;
+	overflow-y: scroll; 
 
 	&-title {
 		color: #fff;

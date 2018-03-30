@@ -6,6 +6,7 @@ $font: fabrikat, sans-serif;
 .header {
 	//visibility: hidden;
 	display: none;
+	position: fixed;
 	height: 48px;
 	width: 100%;
 	background: #000;
@@ -234,9 +235,11 @@ $font: fabrikat, sans-serif;
 @media only screen and (max-width: 680px) {
 	.results {
 		width: 100vw;
+		//margin-top: 60px;
+		padding-top: 80px !important;  
 		left: 0;
 		padding: 24px;
-		padding-bottom: 48px;
+		// padding-bottom: 48px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -247,17 +250,6 @@ $font: fabrikat, sans-serif;
 		}
 
 		&-rooms-room {
-
-			// &:hover > &-content {
-			// 	background: none;
-			// 	transform: translateY(30%);
-			// }
-
-			// &-content {
-			// 	&:hover > &-reserve {
-			// 		visibility: hidden;
-			// 	}
-			// }
 		}
 	}
 
