@@ -14,6 +14,7 @@ class App extends React.Component {
 			timeFrom: null,
 			timeTo: null,
 			numberSeats: 0,
+			searchVal: '',
 			equip: [],
 			isFiltered: false,
 			isLoading: false,
@@ -31,6 +32,7 @@ class App extends React.Component {
 		this.changeFilter = this.changeFilter.bind(this);
 		this.changeIsFiltered = this.changeIsFiltered.bind(this);
 		this.selectEquip = this.selectEquip.bind(this);
+		this.changeSearchVal = this.changeSearchVal.bind(this);
 
 		this.fetchResults();
 	}
@@ -43,12 +45,14 @@ class App extends React.Component {
 					onTimeChangeFrom = {this.onTimeChangeFrom}
 					onTimeChangeTo = {this.onTimeChangeTo}
 					onSeatsChange={this.onSeatsChange}
+					changeSearchVal={this.changeSearchVal}
 					fetchResults = {this.fetchResults}  
 					showFilter={this.state.showFilter}
 					changeFilter={this.changeFilter} 
 					changeIsFiltered={this.changeIsFiltered}
 					selectEquip={this.selectEquip}
 					selected={this.state.equip}
+					searchVal={this.state.searchVal}
 				/>
 				{
 					this.state.isLoading ?
@@ -67,6 +71,7 @@ class App extends React.Component {
 						timeFrom={this.state.timeFrom}
 						timeTo={this.state.timeTo}
 						numberSeats={this.state.numberSeats}
+						searchVal={this.state.searchVal}
 					 />
 				}
 			</div>
@@ -146,6 +151,13 @@ class App extends React.Component {
 		this.setState({
 			...this.state,
 			isFiltered: val
+		});
+	}
+
+	changeSearchVal(evt) {
+		this.setState({
+			...this.state,
+			searchVal: evt.target.value
 		});
 	}
 
