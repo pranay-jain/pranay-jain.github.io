@@ -25,9 +25,15 @@ $font: fabrikat, sans-serif;
 		display: flex;
 		justify-content: space-between;
 
+		.close {
+			height: 30px;
+			width: 30px;
+		}
+
 		.icon {
 			color: #ddd;
 			cursor: pointer;
+			font-size: 1.3em;
 		}
 	}
 

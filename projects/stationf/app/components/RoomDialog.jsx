@@ -31,7 +31,7 @@ export default class RoomDialog extends React.Component {
 			<div id="room" className={`room-dialog ${this.props.isOpen ? 'open' : ''}`}>
 				<div className="room-dialog-head">
 					<span>Reserve Room</span>
-					<div onClick={() => {
+					<div className="close" onClick={() => {
 						this.props.clearCurrentRoom();
 
 						if (this.state.showConfirmation) {
