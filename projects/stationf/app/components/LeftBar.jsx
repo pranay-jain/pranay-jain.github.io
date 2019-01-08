@@ -24,6 +24,7 @@ export default class LeftBar extends React.Component {
 					<hr />
 
 					<div className="left-bar-form-search">
+						
 						<input type="text" value={this.props.searchVal} onChange={this.props.changeSearchVal} placeholder="Search by room name" />
 						<div className="left-bar-form-search-field">Date</div>
 						<input defaultValue="2018-03-31" type="date" onChange={this.props.onDateChange} />
