@@ -8,7 +8,7 @@ html
         include ../../common/loader.pug
         section(class="first project-page")
             .content-project
-                a(href="../../index.html")
+                a(href="../../")
                     <button class="return-to-home">  &larr;  &nbsp;  Back</button>
                 <div class="project-logo">
                     <img src="logo.png">
@@ -39,7 +39,10 @@ html
                         .quote Bringing the nostalgia of block-stacking to an immersive mixed-reality experience. 
                         p The idea of the project was to create an interactive game that took real-world interactions of building with blocks and augment the experience to a virtual space. Each physical block represents a type of building which, when placed on a game board, appears as a virtual rendering of that building on screen. In this way, players can arrange blocks to create a city of their own. Players are encouraged to collaborate and build a sustainable city. After they submit their entry, they can view a 360 model of the city they just created and share it with others on social media.
                     .project-container-main
-                        
+                        p.project-subtitle Defining a Product-Market Fit
+                        p This project was unique in this sense. Our client was Thinkingbox, a production studio that works with other clients on projects. Our expectation from the client was to come up with an idea for an activation installation that uses new and exciting technologies. However, we were also expected to come up with use cases for such an installation: what brands or IP's it could work for and how it can be scaled.
+                        p To do this, we had to reverse-engineer our idea. Once we came up with the wild idea after many brainstorming sessions, we had to roll-back and brainstorm on how this idea is applicable in the real world. We thought of different industries it could work with and came up with different applications for it. 
+                        p We pitched it as a possible educational tool to teach <strong>sustainable urban design</strong>. We pitched our client as <strong>Science World</strong> where they host many such installations to teach science. We even got in touch with them to discuss how they measure success for such installations which helped us further define our goals for the project.
                     .project-container-flex    
                         .project-container-flex-smaller
                             <img src="iphone-black.png" class="full">
@@ -51,18 +54,21 @@ html
                             p However, we discovered that there current AR technology does not support simultaneous tracking of multiple 3D objects. While <b>ARKit</b> allows for extended tracking, it can still only actively track 1 object at a time. Furthermore, it did not have a smooth user experience: recognition took a few seconds and had jitters and lags in movement of the blocks.
                     .project-container-main    
                         <br />
-                        p On further research, we came up with a new solution. Since we were building an on-site installation, we had room to control the apparatus and environment of the project. 
+                        p On further research, we came up with a new solution. Since we were building an on-site installation, we had room to control the apparatus and environment of the project. Using copper tapes, we could use customize the blocks such that when a player places them on a touch-screen base, it would recognize the block. Furthermore, we added unique angular arrangement at the base so that different blocks can be recognized as separate buildings. 
                     .project-container-flex
-                        .project-container-flex-bigger
-                            p Using copper tapes, we could use customize the blocks such that when a player places them on a touch-screen base, it would recognize the block. This was due to the conductive nature of the tape which would transfer the charge from the user's fingers to the touch-screen. Furthermore, we added unique angular arrangement at the base so that different blocks can be recognized as separate buildings. 
                         .project-container-flex-smaller
                             <img src="blocks.png" class="full">
+                            <p class="image-description">How the blocks looked like</p>
+                        .project-container-flex-bigger
+                            <img src="touchpoint.png" class="full">
                     .project-container-main  
-                        p We developed the game as an interactive game in <b>Unity</b>. We developed a server application which renders a collaborative game-view where players observe the city being virtually constructed &mdash; this allows for a <b>multiplayer experience</b>. I implemented the Unity Low Level API (LLAPI), which uses UDP on the Transport Layer to share information between clients and servers. 
+                        p We developed the concept as an interactive game in <b>Unity</b>. We developed a server application which renders a collaborative game-view where players observe the city being virtually constructed &mdash; this allows for a <b>multiplayer experience</b>. I implemented the Unity Low Level API (LLAPI), which uses UDP on the Transport Layer to share information between clients and servers. 
                         <br />
                         p.project-subtitle Combinations
+                        p A core idea of implementing the block-stacking experience was the ability to be able to combine different blocks to make new structures. This makes the building experience scalable &mdash; by being able to create a multitude of structures using only a few building blocks. We wanted to implement this idea virtually in our game.
                         <img src="combinations.png" class="full">
                         <br />
+                        p To do this we came up with the above combinations map. Each block when combined (placed side-by-side) with another block on the board appears as a different type of building. These buildings have different properties from the general buildings. 
 
                         p.project-subtitle User Experience Research
                         p <b>How might we make users place the blocks in the way we want them to?</b>
@@ -96,10 +102,6 @@ html
                             li Some users tried to stack the blocks up while others put the block either horizontally or vertically to see what will happen on big screen. <b>Action: </b>design the appearance of the blocks by different pattern, icon, or colour.
                             li Most of the users picked one block at a time and put it in a fixed place.
                             li The users were curious about what will happen if they take out the block they just put on the map. <b>Action</b>: Use a special eraser block to delete buildings.
-
-
-                    .project-container-main 
-                        p.project-subtitle Defining a Product-Market Fit
 
                     
                         
