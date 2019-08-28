@@ -1,0 +1,68 @@
+doctype html
+html
+    head
+        include ../../common/head.pug
+        <title>KittyClicker | Pranay Jain</title>
+        <link rel="stylesheet" type="text/css" href="../../style.css">
+    body
+        include ../../common/loader.pug
+        section(class="first project-page")
+            .content-project
+                a(href="../../index.html")
+                    <button class="return-to-home">  &larr;  &nbsp;  Back</button>
+                <div class="project-logo">
+                    <img src="Logo.png">
+                </div>
+                <div class="project-title">KittyClicker</div>
+                .project-container
+                    .project-container-left
+                        <div class="description-tile">
+                            <span>Project Type</span>
+                            <p>Internship Side Project </p>
+                        </div>
+                        <div class="description-tile">
+                            <span>Role</span>
+                            <p>Front-end, Product Design</p>
+                        </div>
+                        <div class="description-tile">
+                            <span>Language/Tools</span>
+                            <p>React.js, Chrome Web API, CSS3 Animations, Webpack</p>
+                        </div>
+                        <div class="description-tile">
+                            <span>When</span>
+                            <p>May &mdash; Aug 2018</p>
+                        </div>
+                        <div class="description-tile">
+                            <span>Tags</span> 
+                            <p>Interaction Design, Chrome Application, UX</p>
+                        </div>
+                    .project-container-right
+                       p.project-subtitle The Ask
+                       p As an intern at Dapper Labs, I was tasked to come up with a Chrome extension game based on CryptoKitties. The goal was to create an app to increase customer engagement on their platform by allowing users to interact with their purchased digital cats outside the web-app experience. This was an on-boarding project for me; which meant that I had no experience developing games for blockchain users.
+
+                       p.project-subtitle Approach
+                       p I began the process by first interviewing my colleagues. I organized short chats with product managers and game designers in the company to brainstorm on how to create an engaging browser experience without making it too distracting. I simultaneously interviewed senior developers to understand the possibilities and limitations in developing Chrome apps, a platform I had never worked on.
+                       p We decided to keep the experience as simple and non-intrusive as possible. After downloading the extension, the game would have 'kitties' appear in the browser at random, spaced-out intervals. The users would click on the kitty to capture it and gain a 'point'. The interval had to be not too short that it's annoying, and not too long that the user forget about the game completely. We decided to have the interval be a function of the user's participation and score in the game; so more interest in the game would be rewarded with higher scores. 
+
+                       p.project-subtitle Technology
+                       p The extension was required to be a stateful app which could record the number of Kitties they had successfully captured and also make regular requests to a server to provide updates. So, I decided to develop this project in <strong>React.js</strong>. To make sure that the downloadable files remained small, I used <strong>Webpack</strong> to compile the codebase, which I configured to read from 3 sources and compile them to different output files, while reading their common dependencies from the same directory. 
+
+                        p.project-subtitle Challenges
+                        p The main challenge in this project was to implement login functionality. Since CryptoKitties exist over the Ethereum blockchain, the app would require authentication over the blockchain itself. Unfortunately, Chrome don't allow data exchanges between 2 extensions, which meant I couldn't connect to a web wallet either. Hence, this feature was scoped out of the first version and was postponed until the launch of KittyVerse which planned to release a public API for implementing secure authentication for 3rd party apps.
+
+                        p.project-subtitle Future?
+                        p The app was released by Dapper Labs and marketed on their internal and Discord channels to collect feedback and results for future improvements. The app had over 500 downloads. However, since my internship ended, no future versions are currently being developed. 
+                        p
+                            strong This project can be found on the Chrome Web Store.
+
+                       p.link 
+                        a(href="https://chrome.google.com/webstore/detail/kitty-clicker/nmjjmlhjfmaaceldcbmdndfokbigohkm?hl=en" target="_blank" class="second")
+                            <i class="fab fa-chrome"></i> View on Chrome Web Store
+        include ../../common/footer.pug
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../../master.js"></script>
+    <script src="//cdn.jsdelivr.net/lining.js/0.3.2/lining.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
+    <script src="../lining.effect.js"></script>

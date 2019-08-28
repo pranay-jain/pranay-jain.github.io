@@ -1,0 +1,79 @@
+doctype html
+<html>
+    <head>
+        include ../../common/head.pug
+        <link rel="stylesheet" type="text/css" href="../../style.css">
+    </head>
+    <body>
+        include ../../common/loader.pug
+        <section class="first project-page">
+            <div class="content-project">
+                <div class="project-wrapper">
+                    <div class="project-logo logo-small">
+                        <img src="Logo.png">
+                    </div>
+                    <div class="project-title">Workaholic</div>
+                <div class="project-details">
+        
+                    <div class="description-tile">
+                        <span>Tags</span>
+                        Interaction Design, User Experience Design, Web Application
+                    </div>
+                    <div class="description-tile">
+                        <span>When</span> May 2019 - present
+                    </div>
+                    <div class="description-tile">
+                        <span>Role</span>
+                        Personal Project
+                    </div>
+                </div>
+                <div class="project-description">
+                    <p class="project-subtitle">The Problem</p>
+
+                    <p>From my experience working with various tech companies, I realised that people spend almost 5-8 hours per day in front of their screens. This work requires them to be continuously seated for long hours which affects their physical health in terms of eyesight, posture, neck pain, dehydration and headaches. Personally, after a few weeks, I felt a decline in my own health while working in the office. To counter this problem, I spent an hour and developed a simple program that notified me to stand up and walk around after timed intervals according to my schedule. Upon discussing this incident with my peers, I realised that this problem wasn't limited to tech offices. A lot of people now have their daily tasks centered around these devices. Moreover, with social media and entertainment through Netflix and YouTube, our devices are designed to be attractive and distracting. As a small step towards building a healthy interaction with our devices, I tried to scale my prototype and design Workaholic.</p>
+                    //- <p>Side Note: I do want to share that YouTube has a setting that allows people to limit their usage and notifies them when they've been watching continuously. I find it extremely convenient but I'm not sure about the familiarity of such settings among users.</p>
+
+                    <p class="project-subtitle">Assessing existing solutions</p>
+                    <p>While considering this problem, I thought what every millennial thinks about any problem &mdash; There must be an app for that. Most certainly, I was not wrong. There were several applications I came across, each solving a certain problem about these health issues. Some monitored screen time while some provided tips to improve eyesight. However, two things lacked in most solutions I used. Firstly, I would have needed five different platforms to see insights about my device usage for all the health concerns I raised. Secondly, I felt such applications need to establish a connection with the user to actually help improve their lifestyle. Measuring screen-time on its own is not motivating and lacks the user interaction required.</p>
+                    <p>During the design process for workaholic, I tried to incorporate whatever I learnt from these solutions to build a platform that caters to all these health issues and provides an interaction that feels rewarding.</p>
+
+                    <p class="project-subtitle">Challenges & Features</p>
+                    <img src="3.jpg" class="full">
+                    <p class="image-description">Brainstorming Features</p>
+                    <img src="2.jpg" class="full">
+                    <p class="image-description">Wireframe Layout</p>
+                    <p>There are some obvious challenges that this app needs to overcome to fulfill its goal. Deciding the health activities, understanding the user's daily schedule through an interactive and simple onboarding process, making sure there is a limit to the number of interventions in a day &mdash; to name a few. Additionally, there were some crucial points evaluated during the process.</p>
+                    <p><b>What platform do we use?</b></p>
+                    <p>What type of technology is the most suitable? A software? A web platform? A mobile app or a chrome extension? Envisioning the initial setup that is required everyday was extremely important.</p>
+                    <p>I decided that I want to make something that is accessible and accurate. For now, I felt that a software would be too inconvenient and a mobile application alone could not account for a lot of the screen time. Ultimately, I decided a web app supported by a mobile version would be suitable. As of now, I focussed on the web app and tried to make up for the problem of opening the web app everyday through a motivating user experience.</p>
+                    <p><b>Let's not go overboard.</b></p>
+                    <p>An  important consideration besides promoting ergonomic activities is to understand the cues necessary to instruct the person to do an activity. It is also important that these notifications were subtle and were not intrusive or offensive in any manner. They should be instructive enough to help the person understand what to do, and flexible enough to understand the person's priorities.</p>
+                    <p>The notifications are designed to be simple. A title about the exercise and a few lines to instruct the user what to do. If the user wants to know more about the activity and its benefits, clicking the notification opens the app where the activity is accompanied by an infographic/video. The user can promptly decide using the given information whether they want to change the activity or snooze it for later. When the activity is done, they can mark it complete.</p>
+                    <p><b>Keeping the users motivated</b></p>
+                    <p>It is crucial that the users are motivated to open the app and do these activities. Since productivity apps lack dynamics or instant rewards that motivates users to check these apps, I tried to incorporate some elements of gamification. Users are rewarded by maintaining an everyday streak score along with weekly notifications and graphs to help them realise the efficacy of the application. Additionally, each activity that the user completes gets added to the health tab.</p>
+                </div></div></div>
+                <div class="content-project">
+                    <img src="Final.jpg" class="full">
+                    <p class="image-description">Dashboard Design</p>
+                    <div class="project-wrapper"><div class="project-description">
+                    <p class="project-subtitle">Current Status</p>
+                    <p>Currently, Workaholic is under development and testing. We will share the app with offices soon and evaluate its performance.</p>
+                </div>
+                </div>
+            </div>
+                <div class="content-project">
+                    <div class="project-wrapper">
+                        <div class="project-description"><p>Want to try Workaholic now? Write to me at pranayjain1117@gmail.com</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        include ../../common/footer.pug
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="../../master.js"></script>
+        <script src="//cdn.jsdelivr.net/lining.js/0.3.2/lining.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
+        <script src="../lining.effect.js"></script>
+    </body>
+</html>
