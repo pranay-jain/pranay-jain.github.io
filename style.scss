@@ -451,17 +451,22 @@ header
 	&-subtext
 	{
 		line-height: 2;
-		font-size: 1em;
+		font-size: .92em;
 		color: $text;
 		font-weight: 400;
 		width: 50%;
-		font-family: $heading-font;
+		font-family: $primary-font;//$heading-font;
 		// text-align: justify;
 
-		span {
-			// background: $text-dark;
-			// color: #fff;
-			// border-bottom: 1px solid $text-dark;
+		a {
+			cursor: pointer;
+			border-bottom: 1px solid $text;
+			padding-bottom: 4px;
+
+			&:hover{
+				color: $color-primary;
+				border-bottom: 1px solid $color-primary;
+			}
 		}
 
 		b {
@@ -476,6 +481,7 @@ header
 		display: inline-block;
 		padding: 4px 0;
 		margin-top: 20px;
+		font-size: .92em;
 		// border-bottom: 2px solid $text-dark;
 	}
 }
