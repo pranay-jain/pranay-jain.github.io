@@ -472,15 +472,6 @@ header .hamburger .line-2 {
   width: 50%;
   font-family: "GT-Walsheim", monospace;
 }
-.intro-subtext a {
-  cursor: pointer;
-  border-bottom: 1px solid #4e4e4e;
-  padding-bottom: 4px;
-}
-.intro-subtext a:hover {
-  color: #FFC553;
-  border-bottom: 1px solid #FFC553;
-}
 .intro-subtext b {
   font-weight: 800;
 }
@@ -489,8 +480,17 @@ header .hamburger .line-2 {
   font-family: "GT-Walsheim", monospace;
   display: inline-block;
   padding: 4px 0;
-  margin-top: 20px;
+  margin-top: 32px;
   font-size: 0.92em;
+}
+.intro a {
+  cursor: pointer;
+  border-bottom: 1px solid #4e4e4e;
+  padding-bottom: 4px;
+}
+.intro a:hover {
+  color: #FFC553;
+  border-bottom: 1px solid #FFC553;
 }
 
 section.first {
