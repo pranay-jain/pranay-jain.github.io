@@ -887,6 +887,10 @@ section .articles-wrapper .hide {
   background: url("./img/buildcity.png") !important;
 }
 
+.apru {
+  background: url("./img/apru-banner.png") !important;
+}
+
 .workaholic {
   background: url("./img/workaholic.png") !important;
 }
