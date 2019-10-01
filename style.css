@@ -246,6 +246,10 @@ header.shadow .wrapper {
   background: #FFC553;
 }
 
+sup {
+  font-size: 50%;
+}
+
 header {
   position: fixed;
   top: -1px;
@@ -1262,6 +1266,19 @@ button.return-to-home:hover {
 }
 .project-container-flex-smaller {
   width: 35%;
+}
+.project-container iframe {
+  max-width: 100%;
+}
+.project-container a {
+  text-decoration: underline;
+}
+.project-container .footnotes {
+  font-size: 0.8em;
+}
+.project-container .footnotes li {
+  line-height: 1.5em;
+  text-indent: 0;
 }
 
 .info-grid {

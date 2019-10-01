@@ -200,6 +200,10 @@ header.shadow
 	background: $color-primary;
 }
 
+sup {
+	font-size: 50%;
+}
+
 header
 {
 	position: fixed;
@@ -1388,6 +1392,23 @@ button.return-to-home  {
 			// margin-right: 24px;
 			width: 35%;
 		}
+	}
+
+	iframe {
+		max-width: 100%;
+	}
+
+	a {
+		text-decoration: underline;
+	}
+
+	.footnotes {
+		font-size: .8em;
+
+			li {
+				line-height: 1.5em;
+				text-indent: 0;
+			}
 	}
 }
 
