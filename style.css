@@ -126,7 +126,7 @@ body {
   width: 100%;
   margin: auto;
   background: #fff !important;
-  font-family: "GT-Walsheim", monospace;
+  font-family: "Apercu", monospace;
   overflow-x: hidden;
 }
 
@@ -225,10 +225,6 @@ p {
   left: 50%;
   transform: translate(-50%, -50%) rotate(0deg);
   animation: rotate 4s ease infinite;
-}
-
-.hidden {
-  opacity: 0;
 }
 
 header.shadow {
@@ -338,7 +334,7 @@ header .links .link:hover:before {
 header .links .current {
   color: #191C20;
   /*	border: 2px solid rgba(0,0,0,.1);
-  	border-radius: 20px;*/
+  border-radius: 20px;*/
 }
 header .links .current:before {
   left: 0% !important;
@@ -450,6 +446,22 @@ header .hamburger .line-2 {
   background: rgba(255, 255, 255, 0.05);
 }
 
+#homepage-container {
+  width: 60%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 1024px) {
+  #homepage-container {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  #homepage-container {
+    width: 90%;
+  }
+}
+
 .intro {
   padding: 100px 0;
   margin: auto;
@@ -458,8 +470,8 @@ header .hamburger .line-2 {
   height: 80px;
 }
 .intro-text {
-  font-family: "GT-Walsheim", monospace;
-  font-size: 1.4em;
+  font-family: "Apercu", monospace;
+  font-size: 1.5em;
   color: #191C20;
   font-weight: 800;
   margin-bottom: 40px;
@@ -470,18 +482,18 @@ header .hamburger .line-2 {
 }
 .intro-subtext {
   line-height: 2;
-  font-size: 0.92em;
+  font-size: 1em;
   color: #4e4e4e;
   font-weight: 400;
-  width: 50%;
-  font-family: "GT-Walsheim", monospace;
+  width: 80%;
+  font-family: "Apercu", monospace;
 }
 .intro-subtext b {
   font-weight: 800;
 }
 .intro .scroll-to-projects {
   color: #191C20;
-  font-family: "GT-Walsheim", monospace;
+  font-family: "Apercu", monospace;
   display: inline-block;
   padding: 4px 0;
   margin-top: 32px;
@@ -534,11 +546,6 @@ p.small span {
 }
 p.small span a {
   color: #FFC553;
-}
-
-.content {
-  width: 85%;
-  margin: auto;
 }
 
 .circle-wrapper {
@@ -620,7 +627,7 @@ button.highlight {
   margin: 0;
   border: none;
   background: none;
-  font-family: "GT-Walsheim", monospace;
+  font-family: "Apercu", monospace;
   font-size: 1em;
   font-weight: 500;
   color: #FFC553;
@@ -719,7 +726,7 @@ section .articles-wrapper .button-split {
   display: none;
 }
 section .articles-wrapper .button-split button {
-  font-family: "GT-Walsheim", monospace;
+  font-family: "Apercu", monospace;
   margin: 0px;
   padding: 20px 40px;
   font-size: 0.8em;
@@ -743,9 +750,6 @@ section .articles-wrapper .button-split button:hover {
   color: #FFF;
 }
 section .articles-wrapper article {
-  position: relative;
-  top: 100px;
-  opacity: 0;
   width: 49%;
   margin-bottom: 3%;
   -webkit-transition: all 0.5s ease;
@@ -813,18 +817,18 @@ section .articles-wrapper article h4 i {
   color: #36ab30;
   display: inline-block;
   vertical-align: middle;
-  font-family: "GT-Walsheim", monospace;
+  font-family: "Apercu", monospace;
 }
 section .articles-wrapper article h4 span {
   color: #b3c2d2;
-  font-family: "GT-Walsheim", monospace;
+  font-family: "Apercu", monospace;
   font-weight: 400;
   margin: 10px 0px;
   font-size: 0.6em;
   display: block;
 }
 section .articles-wrapper article p {
-  font-family: "GT-Walsheim", monospace;
+  font-family: "Apercu", monospace;
   font-weight: 400;
   width: calc(100% - 10px);
   margin: 10px auto;
@@ -849,7 +853,8 @@ section .articles-wrapper article p a:hover {
   border-bottom: 1px solid #FFC553;
   -webkit-transition: border-bottom 0s ease;
 }
-section .articles-wrapper article p a .fas, section .articles-wrapper article p a .fab {
+section .articles-wrapper article p a .fas,
+section .articles-wrapper article p a .fab {
   margin-right: 5px;
   font-size: 0.9em;
 }
@@ -907,58 +912,6 @@ section .articles-wrapper .hide {
   background: url("./img/ftt.png") !important;
 }
 
-.camouflage {
-  background: url("./img/Camouflage.jpg") !important;
-}
-
-.wct {
-  background: url("./img/WeClotheThem.jpg") !important;
-}
-
-.gnn {
-  background: url("./img/GNN.jpg") !important;
-}
-
-.sift {
-  background: url("./img/Sift.png") !important;
-}
-
-.sentiment {
-  background: url("./img/Sentiment.jpg") !important;
-}
-
-.face {
-  background: url("./img/FaceRecognition.jpg") !important;
-}
-
-.inkhostel {
-  background: url("./img/InkHostel.jpg") !important;
-}
-
-.burgerbot {
-  background: url("./img/BurgerBot.jpg") !important;
-}
-
-.bubblejs {
-  background: url("./img/BubbleJS.jpg") !important;
-}
-
-.source-code {
-  background: url("./img/SourceCode.jpg") !important;
-}
-
-.google-doodle {
-  background: url("./img/GoogleDoodle.jpg") !important;
-}
-
-.iac {
-  background: url("./img/IAC.jpg") !important;
-}
-
-.vwo {
-  background: url("./img/VWO.jpg") !important;
-}
-
 .sixth-sense {
   background: url("./img/SixthSense.jpg") !important;
 }
@@ -1006,9 +959,10 @@ section .articles-wrapper .hide {
   top: calc(100% + 10px);
 }
 
+footer {
+  margin-top: 48px;
+}
 footer .footer-content {
-  width: 85%;
-  margin: auto;
   border-top: 0.2px solid #b3c2d2;
   padding-top: 48px;
   padding-bottom: 48px;
@@ -1096,7 +1050,7 @@ button.return-to-home {
   margin: 0;
   border: none;
   background: none;
-  font-family: "GT-Walsheim", monospace;
+  font-family: "Apercu", monospace;
   font-size: 1em;
   font-weight: 600;
   cursor: pointer;
@@ -1212,7 +1166,7 @@ button.return-to-home:hover {
   line-height: 1.75;
   font-weight: 200;
   font-size: 1em;
-  font-family: "GT-Walsheim", monospace;
+  font-family: "Apercu", monospace;
   color: #4e4e4e;
 }
 .project-container p.project-subtitle {
@@ -1379,7 +1333,7 @@ button.centerlight {
   margin-top: 80px;
   border: none;
   background: none;
-  font-family: "GT-Walsheim", monospace;
+  font-family: "Apercu", monospace;
   font-size: 1.1em;
   font-weight: 500;
   color: #FFC553;
@@ -1406,6 +1360,9 @@ button.centerlight:hover .fas {
   margin-right: 20px;
 }
 
+.project-page {
+  padding-bottom: 0;
+}
 .project-page img {
   image-orientation: from-image !important;
 }
@@ -1458,7 +1415,8 @@ button.centerlight:hover .fas {
     width: 100%;
   }
 
-  p.about-text, .project-description {
+  p.about-text,
+.project-description {
     width: 75%;
   }
 
@@ -1467,19 +1425,12 @@ button.centerlight:hover .fas {
     margin: auto;
   }
 
-  .project-container-right, .project-container-main {
+  .project-container-right,
+.project-container-main {
     width: 100%;
-  }
-
-  .intro-subtext {
-    width: 60%;
   }
 }
 @media only screen and (max-width: 700px) {
-  body {
-    font-size: 85%;
-  }
-
   .content-project {
     width: 80%;
     margin: auto;
@@ -1499,10 +1450,6 @@ button.centerlight:hover .fas {
   .project-wrapper .project-description {
     padding-top: 30px;
     width: 100%;
-  }
-
-  .intro-subtext {
-    width: 80%;
   }
 }
 @media only screen and (max-width: 550px) {
