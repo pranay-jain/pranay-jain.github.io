@@ -102,11 +102,11 @@ export default {
   },
   colors: {
     ...polaris.colors,
-    primaryLight: "#ACB3DF",
+    secondary: "#74BDCB",
+    muted: "#E7F2F8",
   },
   fontWeights: {
     body: 400,
-    light: 200,
     medium: 500,
     heading: 700,
     bold: 700,

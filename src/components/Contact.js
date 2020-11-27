@@ -1,25 +1,37 @@
 /** @jsx jsx */
-import { jsx, Link, Box, Flex, Text, Styled } from "theme-ui"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
-import { LinkStyle } from "../utils/styles"
+import { jsx, Link, Box, Flex, Text, Styled } from "theme-ui";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { graphql, useStaticQuery } from "gatsby";
+import Img from "gatsby-image";
+import { LinkStyle } from "../utils/styles";
 
 const itemStyle = {
   display: "block",
   textDecoration: "none",
   marginY: 3,
   color: "text",
-  cursor: "pointer",
   fontFamily: "heading",
-}
+};
 
-const SocialItem = ({ icon, name, url }) => (
-  <Link href={url} sx={itemStyle} target="__blank">
-    <FontAwesomeIcon icon={icon} sx={{ fontSize: 2 }} />
-    <span sx={{ fontSize: 2, marginLeft: 2 }}>{name}</span>
-  </Link>
-)
+const SocialItem = ({ icon, name, url, external }) => {
+  return (
+    <div sx={itemStyle}>
+      <Link
+        href={url}
+        sx={{
+          ...LinkStyle,
+          paddingY: 1,
+          color: "text",
+          ":hover": { color: "primary", ...LinkStyle[":hover"] },
+        }}
+        target="__blank"
+      >
+        <FontAwesomeIcon icon={icon} sx={{ fontSize: 0 }} />
+        <span sx={{ fontSize: 2, marginLeft: 2 }}>{name}</span>
+      </Link>
+    </div>
+  );
+};
 
 const query = graphql`
   query {
@@ -42,15 +54,15 @@ const query = graphql`
       }
     }
   }
-`
+`;
 
 export default function ({ resp }) {
-  const data = useStaticQuery(query)
+  const data = useStaticQuery(query);
   return resp ? (
     <ResponsiveContact data={data} />
   ) : (
     <FullSizeContact data={data} />
-  )
+  );
 }
 
 export const ResponsiveContact = ({ data }) => {
@@ -95,8 +107,8 @@ export const ResponsiveContact = ({ data }) => {
       </Flex>
       {/* <Styled.h1 sx={{ margin: 0, fontWeight: "light" }}>Pranay Jain</Styled.h1> */}
     </Box>
-  )
-}
+  );
+};
 
 const FullSizeContact = ({ data }) => {
   return (
@@ -111,16 +123,16 @@ const FullSizeContact = ({ data }) => {
       <Img
         fixed={data.bigImg.childImageSharp.fixed}
         sx={{
-          borderRadius: "4px",
+          boxShadow: "4px 4px 4px 0 #eaeaea",
           marginBottom: 4,
         }}
       />
       <Flex sx={itemStyle}>
         <FontAwesomeIcon
           icon={["fas", "map-marked-alt"]}
-          sx={{ fontSize: 2 }}
+          sx={{ fontSize: 0 }}
         />
-        <Text as="span" sx={{ fontSize: 2, marginLeft: 2 }}>
+        <Text as="span" sx={{ fontSize: 2, marginLeft: 2, fontWeight: "medium" }}>
           Vancouver, BC
         </Text>
       </Flex>
@@ -140,5 +152,5 @@ const FullSizeContact = ({ data }) => {
         url="http://github.com/pranay-jain/"
       />
     </Box>
-  )
-}
+  );
+};

@@ -24,7 +24,7 @@ export default function HomePage() {
   return (
     <div
       sx={{
-        width: ["90%", "80%", "70%"],
+        width: ["90%", "80%", "60%"],
         margin: "auto",
         paddingTop: [2, 5, 5],
       }}

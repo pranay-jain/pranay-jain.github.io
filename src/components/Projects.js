@@ -12,7 +12,7 @@ const Project = ({ title, description, tags, linkTitle, linkHref }) => {
         {tags.map(tag => (
           <span
             sx={{
-              backgroundColor: "#efefef",
+              backgroundColor: "muted",
               padding: 1,
               fontSize: 0,
               color: "highlight",
